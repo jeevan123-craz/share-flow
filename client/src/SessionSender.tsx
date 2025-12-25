@@ -7,8 +7,8 @@ import { io } from 'socket.io-client';
 import axios from 'axios';
 import { FaCloudUploadAlt, FaInstagram } from 'react-icons/fa';
 
-// Use current hostname (works for localhost and network IP)
-const SERVER_URL = `http://${window.location.hostname}:3000`;
+// Use environment variable or deployed Render URL
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || 'https://share-flow.onrender.com';
 
 export default function SessionSender() {
     const { sessionId } = useParams();

@@ -13,9 +13,8 @@ export default function SessionReceiver() {
         // Since we are on "receiver", we assume we accessed this via IP url.
         // So window.location.hostname should be the IP.
         // We can reconstruct API URL.
-        const ip = window.location.hostname;
-        // Note: On mobile, localhost won't work. Needs IP.
-        const apiBase = `http://${ip}:3000`; // Assuming port 3000
+        // Use environment variable or deployed Render URL
+        const apiBase = import.meta.env.VITE_SERVER_URL || 'https://share-flow.onrender.com';
 
         axios.get(`${apiBase}/api/view/${sessionId}`)
             .then(res => setData(res.data))
@@ -34,8 +33,7 @@ export default function SessionReceiver() {
     }, [sessionId]);
 
     const downloadFile = (filename: string) => {
-        const ip = window.location.hostname;
-        const apiBase = `http://${ip}:3000`;
+        const apiBase = import.meta.env.VITE_SERVER_URL || 'https://share-flow.onrender.com';
         window.open(`${apiBase}/downloads/${filename}`, '_blank');
     };
 
