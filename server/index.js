@@ -191,7 +191,8 @@ io.on('connection', (socket) => {
     });
 });
 
-const PORT = 3000;
-httpServer.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on http://${getLocalIP()}:${PORT}`);
+const PORT = process.env.PORT || 3000;
+httpServer.listen(PORT, () => {
+    console.log(`🚀 ShareFlow Server running on port ${PORT}`);
+    console.log(`📡 Local IP: http://${getLocalIP()}:${PORT}`);
 });
