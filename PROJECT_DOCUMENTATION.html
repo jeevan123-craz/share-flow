@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShareFlow - Project Documentation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #1e1e2f 0%, #0f0f1a 100%);
+            color: #e0e0e0;
+            padding: 40px;
+            min-height: 100vh;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        
+        h1 { 
+            font-size: 3rem; 
+            background: linear-gradient(90deg, #a855f7, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        h2 { 
+            font-size: 1.5rem; 
+            color: #a855f7; 
+            margin: 30px 0 15px;
+            border-bottom: 2px solid #a855f7;
+            padding-bottom: 5px;
+        }
+        h3 { color: #818cf8; margin: 20px 0 10px; }
+        
+        p { line-height: 1.8; margin-bottom: 15px; }
+        
+        .badge { 
+            display: inline-block;
+            background: #a855f7;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .url-box {
+            background: #1a1a2e;
+            border-left: 4px solid #a855f7;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 0 8px 8px 0;
+            font-family: monospace;
+            word-break: break-all;
+        }
+        .url-label {
+            font-size: 0.8rem;
+            color: #6366f1;
+            margin-bottom: 5px;
+        }
+        .url-link { 
+            color: #22d3ee; 
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        th { 
+            background: rgba(168, 85, 247, 0.2);
+            color: #a855f7;
+        }
+        
+        ul { margin-left: 20px; line-height: 2; }
+        li::marker { color: #a855f7; }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature {
+            background: rgba(168, 85, 247, 0.1);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .feature-icon { font-size: 2rem; margin-bottom: 10px; }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+        }
+        
+        @media print {
+            body { background: white; color: black; }
+            h1, h2, h3 { color: #6366f1 !important; -webkit-text-fill-color: #6366f1 !important; }
+            .card, .url-box, .feature { border: 1px solid #ccc; }
+            th { background: #f0f0f0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 ShareFlow</h1>
+        <span class="badge">File Sharing Web Application</span>
+        
+        <p>A modern, real-time file sharing web application that enables users to share files and links between devices using QR codes. Built with React, Node.js, and WebSockets.</p>
+        
+        <h2>🔗 Live URLs</h2>
+        
+        <div class="url-box">
+            <div class="url-label">FRONTEND (User Interface)</div>
+            <a class="url-link" href="https://share-flow-bk57buouh-jeevan123-crazs-projects.vercel.app">https://share-flow-bk57buouh-jeevan123-crazs-projects.vercel.app</a>
+        </div>
+        
+        <div class="url-box">
+            <div class="url-label">BACKEND API (Server)</div>
+            <a class="url-link" href="https://share-flow.onrender.com">https://share-flow.onrender.com</a>
+        </div>
+        
+        <div class="url-box">
+            <div class="url-label">GITHUB REPOSITORY</div>
+            <a class="url-link" href="https://github.com/jeevan123-craz/share-flow">https://github.com/jeevan123-craz/share-flow</a>
+        </div>
+        
+        <h2>✨ Features</h2>
+        
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="feature-icon">📁</div>
+                <strong>File Sharing</strong>
+                <p>Drag & drop files to share instantly</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔗</div>
+                <strong>Link Sharing</strong>
+                <p>Share URLs including Instagram Reels</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <strong>QR Code Access</strong>
+                <p>Scan to connect from any device</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📶</div>
+                <strong>Wi-Fi QR</strong>
+                <p>Generate QR for Wi-Fi connection</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <strong>Real-time Updates</strong>
+                <p>Instant sync via WebSockets</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <strong>Modern UI</strong>
+                <p>Beautiful dark theme with animations</p>
+            </div>
+        </div>
+        
+        <h2>🛠️ Tech Stack</h2>
+        
+        <div class="card">
+            <h3>Frontend</h3>
+            <table>
+                <tr><th>Technology</th><th>Purpose</th></tr>
+                <tr><td>React + TypeScript</td><td>UI Framework</td></tr>
+                <tr><td>Vite</td><td>Build Tool</td></tr>
+                <tr><td>Tailwind CSS</td><td>Styling</td></tr>
+                <tr><td>Framer Motion</td><td>Animations</td></tr>
+                <tr><td>Socket.io-client</td><td>Real-time Communication</td></tr>
+                <tr><td>QRCode.react</td><td>QR Code Generation</td></tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h3>Backend</h3>
+            <table>
+                <tr><th>Technology</th><th>Purpose</th></tr>
+                <tr><td>Node.js + Express</td><td>Server Framework</td></tr>
+                <tr><td>Socket.io</td><td>WebSocket Server</td></tr>
+                <tr><td>Multer</td><td>File Upload Handling</td></tr>
+                <tr><td>UUID</td><td>Session ID Generation</td></tr>
+                <tr><td>CORS</td><td>Cross-Origin Requests</td></tr>
+            </table>
+        </div>
+        
+        <h2>📂 Project Structure</h2>
+        
+        <div class="card">
+            <pre style="color: #22d3ee; line-height: 1.6;">
+share-flow/
+├── client/                 # React Frontend
+│   ├── src/
+│   │   ├── App.tsx         # Main App Component
+│   │   ├── Home.tsx        # Landing Page
+│   │   ├── SessionSender.tsx   # Sender Interface
+│   │   └── SessionReceiver.tsx # Receiver Interface
+│   ├── public/
+│   │   └── bg.jpg          # Custom Background
+│   └── package.json
+├── server/                 # Node.js Backend
+│   ├── index.js            # Express Server
+│   ├── uploads/            # Uploaded Files
+│   └── package.json
+├── package.json            # Root Scripts
+└── README.md
+            </pre>
+        </div>
+        
+        <h2>🚀 Deployment</h2>
+        
+        <table>
+            <tr><th>Service</th><th>Component</th><th>Plan</th></tr>
+            <tr><td>Vercel</td><td>Frontend</td><td>Free</td></tr>
+            <tr><td>Render</td><td>Backend</td><td>Free</td></tr>
+            <tr><td>GitHub</td><td>Source Code</td><td>Free</td></tr>
+        </table>
+        
+        <h2>📱 How To Use</h2>
+        
+        <ol style="margin-left: 20px; line-height: 2.5;">
+            <li>Open the app URL in your browser</li>
+            <li>Click <strong>"Start Sharing"</strong> to create a session</li>
+            <li>Scan the QR code with your phone</li>
+            <li>Drag files or paste links to share</li>
+            <li>Files appear instantly on the receiver's device</li>
+        </ol>
+        
+        <h2>👨‍💻 Developer</h2>
+        
+        <div class="card">
+            <p><strong>Name:</strong> Jeevan Kishore</p>
+            <p><strong>GitHub:</strong> <a class="url-link" href="https://github.com/jeevan123-craz">github.com/jeevan123-craz</a></p>
+            <p><strong>Project Date:</strong> December 2024</p>
+        </div>
+        
+        <div class="footer">
+            <p>Generated on December 25, 2024</p>
+            <p>ShareFlow - A Modern File Sharing Solution</p>
+        </div>
+    </div>
+</body>
+</html>
